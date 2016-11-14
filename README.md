@@ -1,0 +1,1 @@
+run with `COMPOSE_HTTP_TIMEOUT=7200 docker-compose up`git 

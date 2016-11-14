@@ -1,0 +1,19 @@
+plugins {
+    id "java"
+    // Just some plugin
+    id 'net.linguica.maven-settings' version '0.5'
+}
+
+test {
+    testLogging {
+        showStandardStreams true
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'junit:junit:4.12'
+}

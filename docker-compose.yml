@@ -1,0 +1,11 @@
+test: &test
+    image: java:8
+    volumes:
+        - ./project:/app
+        - .gradle:/root/.gradle/
+    working_dir: /app
+    command: ./gradlew --no-daemon --rerun-tasks test
+
+secondTest: 
+    <<: [*test]
+    command: ["sh", "-c", "sleep 10 && echo 'running second test' && ./gradlew --no-daemon --rerun-tasks --debug test"]
